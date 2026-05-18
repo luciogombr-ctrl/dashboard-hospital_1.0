@@ -3,7 +3,7 @@ import streamlit as st
 # ---------------------------------------------------
 # IMAGEM DE FUNDO
 # ---------------------------------------------------
-background_image = "https://raw.githubusercontent.com/SEU-USUARIO/SEU-REPOSITORIO/main/imagem.jpg"
+https://raw.githubusercontent.com/SEU-USUARIO/SEU-REPOSITORIO/main/imagem.jpg
 
 # ---------------------------------------------------
 # CONFIGURAÇÃO DA PÁGINA
