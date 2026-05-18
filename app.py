@@ -1,6 +1,11 @@
 import streamlit as st
 
 # ---------------------------------------------------
+# IMAGEM DE FUNDO
+# ---------------------------------------------------
+background_image = "https://raw.githubusercontent.com/SEU-USUARIO/SEU-REPOSITORIO/main/imagem.jpg"
+
+# ---------------------------------------------------
 # CONFIGURAÇÃO DA PÁGINA
 # ---------------------------------------------------
 st.set_page_config(
@@ -10,89 +15,109 @@ st.set_page_config(
 )
 
 # ---------------------------------------------------
-# ESTILO PERSONALIZADO
+# CSS PERSONALIZADO
 # ---------------------------------------------------
-st.markdown("""
+st.markdown(f"""
 <style>
 
-/* FUNDO GERAL */
-.stApp {
-    background: linear-gradient(
-        135deg,
-        #0f172a,
-        #1e293b,
-        #0f172a
-    );
-    color: white;
+/* FUNDO COM IMAGEM */
+.stApp {{
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.70),
+            rgba(0,0,0,0.70)
+        ),
+        url("{background_image}");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-/* REMOVE MENU STREAMLIT */
-#MainMenu {visibility: hidden;}
-footer {visibility: hidden;}
-header {visibility: hidden;}
+/* ESCONDER MENU E RODAPÉ */
+#MainMenu {{
+    visibility: hidden;
+}}
 
-/* TÍTULO */
-.main-title {
-    font-size: 60px;
+footer {{
+    visibility: hidden;
+}}
+
+header {{
+    visibility: hidden;
+}}
+
+/* TÍTULO PRINCIPAL */
+.main-title {{
+    font-size: 65px;
     font-weight: bold;
     text-align: center;
     color: white;
-    margin-top: 60px;
-}
+    margin-top: 80px;
+    text-shadow: 2px 2px 15px rgba(0,0,0,0.8);
+}}
 
 /* SUBTÍTULO */
-.subtitle {
-    font-size: 24px;
+.subtitle {{
+    font-size: 28px;
     text-align: center;
-    color: #cbd5e1;
-    margin-bottom: 40px;
-}
+    color: #e2e8f0;
+    margin-bottom: 50px;
+}}
 
 /* CARD CENTRAL */
-.card {
-    background: rgba(255,255,255,0.08);
-    padding: 40px;
+.card {{
+    background: rgba(255,255,255,0.10);
+    padding: 45px;
     border-radius: 25px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0px 8px 30px rgba(0,0,0,0.4);
+    backdrop-filter: blur(12px);
+    box-shadow: 0px 8px 30px rgba(0,0,0,0.5);
     text-align: center;
-    margin-top: 30px;
-}
+    margin-top: 20px;
+}}
+
+/* TEXTO */
+.card-text {{
+    font-size: 22px;
+    color: #f1f5f9;
+    line-height: 1.8;
+}}
 
 /* ÍCONES */
-.icons {
-    font-size: 28px;
-    margin-top: 20px;
+.icons {{
+    font-size: 30px;
+    margin-top: 25px;
     line-height: 2;
-}
+}}
 
 /* BOTÃO */
-div.stButton > button {
+div.stButton > button {{
     background: linear-gradient(90deg, #2563eb, #3b82f6);
     color: white;
-    font-size: 22px;
+    font-size: 24px;
     font-weight: bold;
-    padding: 15px 40px;
+    padding: 16px 40px;
     border-radius: 15px;
     border: none;
     width: 100%;
     transition: 0.3s;
     box-shadow: 0px 5px 20px rgba(37,99,235,0.5);
-}
+}}
 
-/* EFEITO HOVER */
-div.stButton > button:hover {
+/* HOVER DO BOTÃO */
+div.stButton > button:hover {{
     transform: scale(1.05);
     background: linear-gradient(90deg, #1d4ed8, #2563eb);
-}
+}}
 
 /* RODAPÉ */
-.footer {
+.footer {{
     text-align: center;
-    color: #94a3b8;
+    color: #cbd5e1;
     margin-top: 80px;
-    font-size: 15px;
-}
+    font-size: 16px;
+}}
 
 </style>
 """, unsafe_allow_html=True)
@@ -121,9 +146,11 @@ Transformando dados em decisões estratégicas
 st.markdown("""
 <div class="card">
 
-<h2>📊 Plataforma Completa de Gestão</h2>
+<h2 style="color:white; font-size:36px;">
+📊 Plataforma Completa de Gestão
+</h2>
 
-<p style="font-size:20px; color:#e2e8f0;">
+<p class="card-text">
 
 Acompanhe métricas em tempo real, visualize gráficos
 interativos e tenha controle total das áreas:
@@ -140,7 +167,7 @@ interativos e tenha controle total das áreas:
 
 <br>
 
-<p style="font-size:18px; color:#cbd5e1;">
+<p class="card-text">
 
 Uma experiência moderna, rápida e intuitiva
 para impulsionar sua produtividade.
