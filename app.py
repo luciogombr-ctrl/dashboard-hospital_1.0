@@ -33,7 +33,7 @@ st.markdown(f"""
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-}
+}}
 
 /* ESCONDER MENU E RODAPÉ */
 #MainMenu {{
