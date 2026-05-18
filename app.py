@@ -1,37 +1,62 @@
 import streamlit as st
 
+# -----------------------------------
+# CONFIGURAÇÃO DA PÁGINA
+# -----------------------------------
 st.set_page_config(
-    page_title="Dashboard Principal",
-    page_icon="📊",
+    page_title="Dashboard Inteligente",
+    page_icon="🚀",
     layout="wide"
 )
 
-st.title("📊 Dashboard Hospitalar")
+# -----------------------------------
+# TÍTULO
+# -----------------------------------
+st.markdown("""
+<h1 style='text-align:center; color:#2563eb;'>
+🚀 Dashboard Inteligente de Gestão
+</h1>
+""", unsafe_allow_html=True)
 
-st.markdown("---")
+# -----------------------------------
+# DESCRIÇÃO
+# -----------------------------------
+st.markdown("""
+<div style='text-align:center; font-size:20px;'>
 
-st.subheader("Escolha uma área do sistema")
+Transforme dados em decisões com uma plataforma moderna,
+rápida e intuitiva.
 
+<br><br>
+
+📊 Financeiro<br>
+🏥 Hospitalar<br>
+🛒 Vendas
+
+<br><br>
+
+Gráficos interativos, indicadores em tempo real
+e análises estratégicas para o seu negócio.
+
+</div>
+""", unsafe_allow_html=True)
+
+# -----------------------------------
+# BOTÃO CENTRAL
+# -----------------------------------
 col1, col2, col3 = st.columns(3)
 
-with col1:
-    st.page_link(
-        "pages/1_Financeiro.py",
-        label="💰 Financeiro"
-    )
-
 with col2:
-    st.page_link(
-        "pages/2_Hospital.py",
-        label="🏥 Hospital"
-    )
+    if st.button("🚀 Clique Aqui para Acessar o Dashboard"):
+        st.switch_page("pages/1_Financeiro.py")
 
-with col3:
-    st.page_link(
-        "pages/3_Vendas.py",
-        label="📈 Vendas"
-    )
+# -----------------------------------
+# RODAPÉ
+# -----------------------------------
+st.markdown("""
+<hr>
 
-st.markdown("---")
-
-st.info("Sistema completo de gestão hospitalar com indicadores e gráficos em tempo real.")
+<p style='text-align:center; color:gray;'>
+Desenvolvido com Python e Streamlit
+</p>
+""", unsafe_allow_html=True)
