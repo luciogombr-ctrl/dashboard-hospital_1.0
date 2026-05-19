@@ -38,27 +38,33 @@ header {
     font-size: 72px;
     font-weight: bold;
     text-align: center;
-    color: #166534;
+    color: white;
     margin-top: 70px;
+
+    text-shadow: 1px 1px 10px rgba(0,0,0,0.25);
 }
 
 /* SUBTÍTULO */
 .subtitle {
     font-size: 30px;
     text-align: center;
-    color: #15803d;
+    color: white;
     margin-bottom: 50px;
     font-weight: 600;
+
+    text-shadow: 1px 1px 8px rgba(0,0,0,0.20);
 }
 
 /* CARD CENTRAL */
 .card {
 
-    background: rgba(0,140,0,0.75);
+    background: rgba(255,255,255,0.18);
 
     padding: 55px;
 
     border-radius: 25px;
+
+    backdrop-filter: blur(8px);
 
     box-shadow: 0px 8px 25px rgba(0,0,0,0.10);
 
@@ -70,11 +76,13 @@ header {
 /* TÍTULO DO CARD */
 .card-title {
 
-    color: #166534;
+    color: white;
 
     font-size: 42px;
 
     font-weight: bold;
+
+    text-shadow: 1px 1px 10px rgba(0,0,0,0.25);
 }
 
 /* TEXTO */
@@ -82,11 +90,13 @@ header {
 
     font-size: 24px;
 
-    color: #14532d;
+    color: white;
 
     line-height: 1.8;
 
     font-weight: 600;
+
+    text-shadow: 1px 1px 8px rgba(0,0,0,0.20);
 }
 
 /* BOTÕES */
@@ -124,13 +134,15 @@ div.stButton > button:hover {
 
     text-align: center;
 
-    color: #166534;
+    color: white;
 
     margin-top: 80px;
 
     font-size: 16px;
 
     font-weight: 600;
+
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.20);
 }
 
 </style>
