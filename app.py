@@ -15,13 +15,14 @@ st.set_page_config(
 st.markdown("""
 <style>
 
-/* FUNDO GRADIENTE */
+/* FUNDO VERDE CLARO + VERDE ESCURO */
 .stApp {
     background: linear-gradient(
         135deg,
-        #ffffff 0%,
-        #dcfce7 45%,
-        #22c55e 100%
+        #dcfce7 0%,
+        #86efac 40%,
+        #16a34a 75%,
+        #14532d 100%
     );
 }
 
@@ -38,53 +39,69 @@ header {
     visibility: hidden;
 }
 
-/* TÍTULO PRINCIPAL */
+/* TÍTULO */
 .main-title {
     font-size: 72px;
     font-weight: bold;
     text-align: center;
-    color: #14532d;
+    color: white;
     margin-top: 70px;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.10);
+    text-shadow: 2px 2px 15px rgba(0,0,0,0.35);
 }
 
 /* SUBTÍTULO */
 .subtitle {
     font-size: 30px;
     text-align: center;
-    color: #166534;
+    color: #f0fdf4;
     margin-bottom: 50px;
     font-weight: 600;
 }
 
 /* CARD CENTRAL */
 .card {
-    background: rgba(255,255,255,0.92);
+
+    background: rgba(255,255,255,0.18);
 
     padding: 55px;
 
     border-radius: 25px;
 
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(14px);
 
-    box-shadow: 0px 10px 35px rgba(0,0,0,0.15);
+    box-shadow: 0px 10px 35px rgba(0,0,0,0.25);
 
     text-align: center;
 
     margin-top: 20px;
 
-    border: 1px solid rgba(255,255,255,0.7);
+    border: 1px solid rgba(255,255,255,0.25);
 }
 
 /* TEXTO DO CARD */
 .card-text {
+
     font-size: 24px;
 
-    color: #14532d;
+    color: white;
 
     line-height: 1.8;
 
     font-weight: bold;
+
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.35);
+}
+
+/* TÍTULO DO CARD */
+.card-title {
+
+    color: white;
+
+    font-size: 42px;
+
+    font-weight: bold;
+
+    text-shadow: 1px 1px 10px rgba(0,0,0,0.35);
 }
 
 /* BOTÕES */
@@ -92,8 +109,8 @@ div.stButton > button {
 
     background: linear-gradient(
         90deg,
-        #16a34a,
-        #22c55e
+        #14532d,
+        #16a34a
     );
 
     color: white;
@@ -112,18 +129,18 @@ div.stButton > button {
 
     transition: 0.3s;
 
-    box-shadow: 0px 5px 20px rgba(22,163,74,0.35);
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.25);
 }
 
-/* HOVER BOTÕES */
+/* HOVER */
 div.stButton > button:hover {
 
     transform: scale(1.05);
 
     background: linear-gradient(
         90deg,
-        #15803d,
-        #16a34a
+        #166534,
+        #22c55e
     );
 }
 
@@ -132,13 +149,15 @@ div.stButton > button:hover {
 
     text-align: center;
 
-    color: #14532d;
+    color: white;
 
     margin-top: 80px;
 
     font-size: 16px;
 
     font-weight: 600;
+
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.25);
 }
 
 </style>
@@ -168,15 +187,9 @@ Gestão inteligente para hospitais e clínicas
 st.markdown("""
 <div class="card">
 
-<h2 style="
-color:#15803d;
-font-size:42px;
-font-weight:bold;
-">
-
+<div class="card-title">
 📊 Plataforma Completa de Gestão
-
-</h2>
+</div>
 
 <br>
 
@@ -220,7 +233,7 @@ st.write("")
 st.write("")
 
 # ---------------------------------------------------
-# BOTÕES DE NAVEGAÇÃO
+# BOTÕES
 # ---------------------------------------------------
 col1, col2, col3 = st.columns(3)
 
