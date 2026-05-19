@@ -10,18 +10,18 @@ st.set_page_config(
 )
 
 # ---------------------------------------------------
-# CSS TEMA HOSPITALAR
+# CSS TEMA VERDE E BRANCO
 # ---------------------------------------------------
 st.markdown("""
 <style>
 
-/* FUNDO */
+/* FUNDO GRADIENTE */
 .stApp {
     background: linear-gradient(
         135deg,
-        #064e3b 0%,
-        #065f46 40%,
-        #991b1b 100%
+        #ffffff 0%,
+        #dcfce7 40%,
+        #16a34a 100%
     );
 }
 
@@ -43,44 +43,44 @@ header {
     font-size: 70px;
     font-weight: bold;
     text-align: center;
-    color: white;
+    color: #14532d;
     margin-top: 80px;
-    text-shadow: 2px 2px 20px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.1);
 }
 
 /* SUBTÍTULO */
 .subtitle {
     font-size: 28px;
     text-align: center;
-    color: #f1f5f9;
+    color: #166534;
     margin-bottom: 50px;
 }
 
 /* CARD */
 .card {
-    background: rgba(255,255,255,0.10);
+    background: rgba(255,255,255,0.65);
     padding: 45px;
     border-radius: 25px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0px 10px 30px rgba(0,0,0,0.4);
+    backdrop-filter: blur(8px);
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.15);
     text-align: center;
     margin-top: 20px;
-    border: 1px solid rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.5);
 }
 
 /* TEXTO */
 .card-text {
     font-size: 22px;
-    color: white;
+    color: #14532d;
     line-height: 1.8;
 }
 
-/* BOTÕES */
+/* BOTÕES VERDES */
 div.stButton > button {
     background: linear-gradient(
         90deg,
-        #dc2626,
-        #16a34a
+        #16a34a,
+        #22c55e
     );
 
     color: white;
@@ -95,7 +95,7 @@ div.stButton > button {
 
     transition: 0.3s;
 
-    box-shadow: 0px 5px 20px rgba(0,0,0,0.4);
+    box-shadow: 0px 5px 20px rgba(22,163,74,0.35);
 }
 
 /* HOVER */
@@ -104,17 +104,18 @@ div.stButton > button:hover {
 
     background: linear-gradient(
         90deg,
-        #b91c1c,
-        #15803d
+        #15803d,
+        #16a34a
     );
 }
 
 /* RODAPÉ */
 .footer {
     text-align: center;
-    color: white;
+    color: #14532d;
     margin-top: 80px;
     font-size: 16px;
+    font-weight: 500;
 }
 
 </style>
@@ -139,12 +140,12 @@ Gestão inteligente para hospitais e clínicas
 """, unsafe_allow_html=True)
 
 # ---------------------------------------------------
-# CARD
+# CARD CENTRAL
 # ---------------------------------------------------
 st.markdown("""
 <div class="card">
 
-<h2 style="color:white; font-size:38px;">
+<h2 style="color:#14532d; font-size:38px;">
 📊 Plataforma Completa de Gestão
 </h2>
 
