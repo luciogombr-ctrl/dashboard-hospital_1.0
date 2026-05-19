@@ -54,7 +54,7 @@ header {
 /* CARD CENTRAL */
 .card {
 
-    background: rgba(55,55,55,0.75);
+    background: rgba(0,130,0,0.75);
 
     padding: 55px;
 
