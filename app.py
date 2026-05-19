@@ -15,9 +15,9 @@ st.set_page_config(
 st.markdown("""
 <style>
 
-/* FUNDO VERDE SUAVE */
+/* FUNDO VERDE */
 .stApp {
-    background-color: #dff5e1;
+    background-color: #16a34a;
 }
 
 /* ESCONDER MENU */
@@ -58,7 +58,7 @@ header {
 /* CARD CENTRAL */
 .card {
 
-    background: rgba(255,255,255,0.18);
+    background: rgba(255,255,255,0.15);
 
     padding: 55px;
 
@@ -66,7 +66,7 @@ header {
 
     backdrop-filter: blur(8px);
 
-    box-shadow: 0px 8px 25px rgba(0,0,0,0.10);
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.15);
 
     text-align: center;
 
@@ -102,9 +102,9 @@ header {
 /* BOTÕES */
 div.stButton > button {
 
-    background-color: #16a34a;
+    background-color: white;
 
-    color: white;
+    color: #15803d;
 
     font-size: 22px;
 
@@ -124,7 +124,7 @@ div.stButton > button {
 /* HOVER */
 div.stButton > button:hover {
 
-    background-color: #15803d;
+    background-color: #dcfce7;
 
     transform: scale(1.03);
 }
