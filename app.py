@@ -20,8 +20,8 @@ st.markdown("""
     background: linear-gradient(
         135deg,
         #ffffff 0%,
-        #dcfce7 40%,
-        #16a34a 100%
+        #dcfce7 45%,
+        #22c55e 100%
     );
 }
 
@@ -44,41 +44,52 @@ header {
     font-weight: bold;
     text-align: center;
     color: #14532d;
-    margin-top: 80px;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    margin-top: 70px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.10);
 }
 
 /* SUBTÍTULO */
 .subtitle {
-    font-size: 28px;
+    font-size: 30px;
     text-align: center;
     color: #166534;
     margin-bottom: 50px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 /* CARD CENTRAL */
 .card {
-    background: rgba(255,255,255,0.70);
-    padding: 50px;
+    background: rgba(255,255,255,0.92);
+
+    padding: 55px;
+
     border-radius: 25px;
+
     backdrop-filter: blur(10px);
+
     box-shadow: 0px 10px 35px rgba(0,0,0,0.15);
+
     text-align: center;
+
     margin-top: 20px;
-    border: 1px solid rgba(255,255,255,0.6);
+
+    border: 1px solid rgba(255,255,255,0.7);
 }
 
-/* TEXOS DO CARD */
+/* TEXTO DO CARD */
 .card-text {
-    font-size: 22px;
-    color: #16a34a;
+    font-size: 24px;
+
+    color: #14532d;
+
     line-height: 1.8;
-    font-weight: 600;
+
+    font-weight: bold;
 }
 
 /* BOTÕES */
 div.stButton > button {
+
     background: linear-gradient(
         90deg,
         #16a34a,
@@ -86,11 +97,15 @@ div.stButton > button {
     );
 
     color: white;
+
     font-size: 22px;
+
     font-weight: bold;
 
     padding: 16px;
+
     border-radius: 15px;
+
     border: none;
 
     width: 100%;
@@ -102,6 +117,7 @@ div.stButton > button {
 
 /* HOVER BOTÕES */
 div.stButton > button:hover {
+
     transform: scale(1.05);
 
     background: linear-gradient(
@@ -113,18 +129,23 @@ div.stButton > button:hover {
 
 /* RODAPÉ */
 .footer {
+
     text-align: center;
+
     color: #14532d;
+
     margin-top: 80px;
+
     font-size: 16px;
-    font-weight: 500;
+
+    font-weight: 600;
 }
 
 </style>
 """, unsafe_allow_html=True)
 
 # ---------------------------------------------------
-# TÍTULO
+# TÍTULO PRINCIPAL
 # ---------------------------------------------------
 st.markdown("""
 <div class="main-title">
@@ -147,8 +168,14 @@ Gestão inteligente para hospitais e clínicas
 st.markdown("""
 <div class="card">
 
-<h2 style="color:#16a34a; font-size:38px; font-weight:bold;">
+<h2 style="
+color:#15803d;
+font-size:42px;
+font-weight:bold;
+">
+
 📊 Plataforma Completa de Gestão
+
 </h2>
 
 <br>
@@ -165,8 +192,10 @@ controle total das áreas estratégicas.
 
 <p class="card-text">
 
-📈 Financeiro <br>
-🏥 Hospitalar <br>
+📈 Financeiro <br><br>
+
+🏥 Hospitalar <br><br>
+
 🛒 Vendas
 
 </p>
