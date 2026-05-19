@@ -10,7 +10,7 @@ st.set_page_config(
 )
 
 # ---------------------------------------------------
-# CSS TEMA VERDE E BRANCO
+# CSS PERSONALIZADO
 # ---------------------------------------------------
 st.markdown("""
 <style>
@@ -38,9 +38,9 @@ header {
     visibility: hidden;
 }
 
-/* TÍTULO */
+/* TÍTULO PRINCIPAL */
 .main-title {
-    font-size: 70px;
+    font-size: 72px;
     font-weight: bold;
     text-align: center;
     color: #14532d;
@@ -54,28 +54,30 @@ header {
     text-align: center;
     color: #166534;
     margin-bottom: 50px;
+    font-weight: 500;
 }
 
-/* CARD */
+/* CARD CENTRAL */
 .card {
-    background: rgba(255,255,255,0.65);
-    padding: 45px;
+    background: rgba(255,255,255,0.70);
+    padding: 50px;
     border-radius: 25px;
-    backdrop-filter: blur(8px);
-    box-shadow: 0px 10px 30px rgba(0,0,0,0.15);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 10px 35px rgba(0,0,0,0.15);
     text-align: center;
     margin-top: 20px;
-    border: 1px solid rgba(255,255,255,0.5);
+    border: 1px solid rgba(255,255,255,0.6);
 }
 
-/* TEXTO */
+/* TEXOS DO CARD */
 .card-text {
     font-size: 22px;
-    color: #14532d;
+    color: #16a34a;
     line-height: 1.8;
+    font-weight: 600;
 }
 
-/* BOTÕES VERDES */
+/* BOTÕES */
 div.stButton > button {
     background: linear-gradient(
         90deg,
@@ -98,7 +100,7 @@ div.stButton > button {
     box-shadow: 0px 5px 20px rgba(22,163,74,0.35);
 }
 
-/* HOVER */
+/* HOVER BOTÕES */
 div.stButton > button:hover {
     transform: scale(1.05);
 
@@ -145,9 +147,11 @@ Gestão inteligente para hospitais e clínicas
 st.markdown("""
 <div class="card">
 
-<h2 style="color:#14532d; font-size:38px;">
+<h2 style="color:#16a34a; font-size:38px; font-weight:bold;">
 📊 Plataforma Completa de Gestão
 </h2>
+
+<br>
 
 <p class="card-text">
 
@@ -157,6 +161,8 @@ controle total das áreas estratégicas.
 
 </p>
 
+<br>
+
 <p class="card-text">
 
 📈 Financeiro <br>
@@ -164,6 +170,8 @@ controle total das áreas estratégicas.
 🛒 Vendas
 
 </p>
+
+<br>
 
 <p class="card-text">
 
@@ -183,7 +191,7 @@ st.write("")
 st.write("")
 
 # ---------------------------------------------------
-# BOTÕES
+# BOTÕES DE NAVEGAÇÃO
 # ---------------------------------------------------
 col1, col2, col3 = st.columns(3)
 
