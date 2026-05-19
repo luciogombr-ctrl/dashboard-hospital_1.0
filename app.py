@@ -12,7 +12,7 @@ st.set_page_config(
 # ---------------------------------------------------
 # IMAGEM DE FUNDO
 # ---------------------------------------------------
-background_image = "https://raw.githubusercontent.com/SEU-USUARIO/SEU-REPOSITORIO/main/imagem.jpg"
+background_image = "https://raw.githubusercontent.com/luciogombr-ctrl/dashboard-hospital/main/imagem.jpg"
 
 # ---------------------------------------------------
 # CSS PERSONALIZADO
