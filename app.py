@@ -4,113 +4,118 @@ import streamlit as st
 # CONFIGURAÇÃO DA PÁGINA
 # ---------------------------------------------------
 st.set_page_config(
-    page_title="Dashboard Inteligente",
-    page_icon="🚀",
+    page_title="Dashboard Hospitalar",
+    page_icon="🏥",
     layout="wide"
 )
 
 # ---------------------------------------------------
-# IMAGEM DE FUNDO
+# CSS TEMA HOSPITALAR
 # ---------------------------------------------------
-background_image = "https://raw.githubusercontent.com/luciogombr-ctrl/dashboard-hospital/main/imagem.jpg"
-
-# ---------------------------------------------------
-# CSS PERSONALIZADO
-# ---------------------------------------------------
-st.markdown(f"""
+st.markdown("""
 <style>
 
 /* FUNDO */
-.stApp {{
-    background:
-        linear-gradient(
-            rgba(0,0,0,0.75),
-            rgba(0,0,0,0.75)
-        ),
-        url("{background_image}");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}}
+.stApp {
+    background: linear-gradient(
+        135deg,
+        #064e3b 0%,
+        #065f46 40%,
+        #991b1b 100%
+    );
+}
 
 /* ESCONDER MENU */
-#MainMenu {{
+#MainMenu {
     visibility: hidden;
-}}
+}
 
-footer {{
+footer {
     visibility: hidden;
-}}
+}
 
-header {{
+header {
     visibility: hidden;
-}}
+}
 
 /* TÍTULO */
-.main-title {{
+.main-title {
     font-size: 70px;
     font-weight: bold;
     text-align: center;
     color: white;
     margin-top: 80px;
-    text-shadow: 2px 2px 20px rgba(0,0,0,0.8);
-}}
+    text-shadow: 2px 2px 20px rgba(0,0,0,0.5);
+}
 
 /* SUBTÍTULO */
-.subtitle {{
+.subtitle {
     font-size: 28px;
     text-align: center;
-    color: #e2e8f0;
-    margin-bottom: 60px;
-}}
+    color: #f1f5f9;
+    margin-bottom: 50px;
+}
 
 /* CARD */
-.card {{
+.card {
     background: rgba(255,255,255,0.10);
     padding: 45px;
     border-radius: 25px;
-    backdrop-filter: blur(12px);
-    box-shadow: 0px 8px 30px rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.4);
     text-align: center;
     margin-top: 20px;
-}}
+    border: 1px solid rgba(255,255,255,0.15);
+}
 
 /* TEXTO */
-.card-text {{
+.card-text {
     font-size: 22px;
-    color: #f1f5f9;
+    color: white;
     line-height: 1.8;
-}}
+}
 
 /* BOTÕES */
-div.stButton > button {{
-    background: linear-gradient(90deg, #2563eb, #3b82f6);
+div.stButton > button {
+    background: linear-gradient(
+        90deg,
+        #dc2626,
+        #16a34a
+    );
+
     color: white;
     font-size: 22px;
     font-weight: bold;
+
     padding: 16px;
     border-radius: 15px;
     border: none;
+
     width: 100%;
+
     transition: 0.3s;
-    box-shadow: 0px 5px 20px rgba(37,99,235,0.5);
-}}
+
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.4);
+}
 
 /* HOVER */
-div.stButton > button:hover {{
+div.stButton > button:hover {
     transform: scale(1.05);
-    background: linear-gradient(90deg, #1d4ed8, #2563eb);
-}}
+
+    background: linear-gradient(
+        90deg,
+        #b91c1c,
+        #15803d
+    );
+}
 
 /* RODAPÉ */
-.footer {{
+.footer {
     text-align: center;
-    color: #cbd5e1;
+    color: white;
     margin-top: 80px;
     font-size: 16px;
-}}
+}
 
 </style>
 """, unsafe_allow_html=True)
@@ -120,7 +125,7 @@ div.stButton > button:hover {{
 # ---------------------------------------------------
 st.markdown("""
 <div class="main-title">
-🚀 Dashboard Inteligente
+🏥 Dashboard Hospitalar
 </div>
 """, unsafe_allow_html=True)
 
@@ -129,37 +134,40 @@ st.markdown("""
 # ---------------------------------------------------
 st.markdown("""
 <div class="subtitle">
-Transformando dados em decisões estratégicas
+Gestão inteligente para hospitais e clínicas
 </div>
 """, unsafe_allow_html=True)
 
 # ---------------------------------------------------
-# CARD CENTRAL
+# CARD
 # ---------------------------------------------------
 st.markdown("""
 <div class="card">
 
-<h2 style="color:white; font-size:36px;">
+<h2 style="color:white; font-size:38px;">
 📊 Plataforma Completa de Gestão
 </h2>
 
 <p class="card-text">
 
-Acompanhe métricas em tempo real, visualize gráficos
-interativos e tenha controle total das áreas:
+Monitore indicadores em tempo real,
+acompanhe gráficos interativos e tenha
+controle total das áreas estratégicas.
 
 </p>
 
 <p class="card-text">
+
 📈 Financeiro <br>
 🏥 Hospitalar <br>
 🛒 Vendas
+
 </p>
 
 <p class="card-text">
 
-Uma experiência moderna, rápida e intuitiva
-para impulsionar sua produtividade.
+Tecnologia moderna para decisões rápidas
+e eficientes.
 
 </p>
 
@@ -174,7 +182,7 @@ st.write("")
 st.write("")
 
 # ---------------------------------------------------
-# BOTÕES DE NAVEGAÇÃO
+# BOTÕES
 # ---------------------------------------------------
 col1, col2, col3 = st.columns(3)
 
@@ -199,7 +207,7 @@ with col3:
 st.markdown("""
 <div class="footer">
 
-Desenvolvido com ❤️ usando Python e Streamlit
+Desenvolvido com ❤️ usando Python + Streamlit
 
 </div>
 """, unsafe_allow_html=True)
