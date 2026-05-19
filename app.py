@@ -1,11 +1,6 @@
 import streamlit as st
 
 # ---------------------------------------------------
-# IMAGEM DE FUNDO
-# ---------------------------------------------------
-background_image = "https://raw.githubusercontent.com/SEU-USUARIO/SEU-REPOSITORIO/main/imagem.jpg"
-
-# ---------------------------------------------------
 # CONFIGURAÇÃO DA PÁGINA
 # ---------------------------------------------------
 st.set_page_config(
@@ -15,17 +10,22 @@ st.set_page_config(
 )
 
 # ---------------------------------------------------
+# IMAGEM DE FUNDO
+# ---------------------------------------------------
+background_image = "https://raw.githubusercontent.com/SEU-USUARIO/SEU-REPOSITORIO/main/imagem.jpg"
+
+# ---------------------------------------------------
 # CSS PERSONALIZADO
 # ---------------------------------------------------
 st.markdown(f"""
 <style>
 
-/* FUNDO COM IMAGEM */
+/* FUNDO */
 .stApp {{
     background:
         linear-gradient(
-            rgba(0,0,0,0.70),
-            rgba(0,0,0,0.70)
+            rgba(0,0,0,0.75),
+            rgba(0,0,0,0.75)
         ),
         url("{background_image}");
 
@@ -35,7 +35,7 @@ st.markdown(f"""
     background-attachment: fixed;
 }}
 
-/* ESCONDER MENU E RODAPÉ */
+/* ESCONDER MENU */
 #MainMenu {{
     visibility: hidden;
 }}
@@ -48,14 +48,14 @@ header {{
     visibility: hidden;
 }}
 
-/* TÍTULO PRINCIPAL */
+/* TÍTULO */
 .main-title {{
-    font-size: 65px;
+    font-size: 70px;
     font-weight: bold;
     text-align: center;
     color: white;
     margin-top: 80px;
-    text-shadow: 2px 2px 15px rgba(0,0,0,0.8);
+    text-shadow: 2px 2px 20px rgba(0,0,0,0.8);
 }}
 
 /* SUBTÍTULO */
@@ -63,10 +63,10 @@ header {{
     font-size: 28px;
     text-align: center;
     color: #e2e8f0;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }}
 
-/* CARD CENTRAL */
+/* CARD */
 .card {{
     background: rgba(255,255,255,0.10);
     padding: 45px;
@@ -84,20 +84,13 @@ header {{
     line-height: 1.8;
 }}
 
-/* ÍCONES */
-.icons {{
-    font-size: 30px;
-    margin-top: 25px;
-    line-height: 2;
-}}
-
-/* BOTÃO */
+/* BOTÕES */
 div.stButton > button {{
     background: linear-gradient(90deg, #2563eb, #3b82f6);
     color: white;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
-    padding: 16px 40px;
+    padding: 16px;
     border-radius: 15px;
     border: none;
     width: 100%;
@@ -105,7 +98,7 @@ div.stButton > button {{
     box-shadow: 0px 5px 20px rgba(37,99,235,0.5);
 }}
 
-/* HOVER DO BOTÃO */
+/* HOVER */
 div.stButton > button:hover {{
     transform: scale(1.05);
     background: linear-gradient(90deg, #1d4ed8, #2563eb);
@@ -123,7 +116,7 @@ div.stButton > button:hover {{
 """, unsafe_allow_html=True)
 
 # ---------------------------------------------------
-# TÍTULO PRINCIPAL
+# TÍTULO
 # ---------------------------------------------------
 st.markdown("""
 <div class="main-title">
@@ -157,15 +150,11 @@ interativos e tenha controle total das áreas:
 
 </p>
 
-<div class="icons">
-
-📈 Financeiro<br>
-🏥 Hospitalar<br>
+<p class="card-text">
+📈 Financeiro <br>
+🏥 Hospitalar <br>
 🛒 Vendas
-
-</div>
-
-<br>
+</p>
 
 <p class="card-text">
 
@@ -185,13 +174,24 @@ st.write("")
 st.write("")
 
 # ---------------------------------------------------
-# BOTÃO CENTRAL
+# BOTÕES DE NAVEGAÇÃO
 # ---------------------------------------------------
-col1, col2, col3 = st.columns([1,2,1])
+col1, col2, col3 = st.columns(3)
 
-with col2:
-    if st.button("🚀 Clique Aqui para Acessar o Dashboard"):
+# FINANCEIRO
+with col1:
+    if st.button("📈 Financeiro"):
         st.switch_page("pages/1_Financeiro.py")
+
+# HOSPITAL
+with col2:
+    if st.button("🏥 Hospital"):
+        st.switch_page("pages/2_Hospital.py")
+
+# VENDAS
+with col3:
+    if st.button("🛒 Vendas"):
+        st.switch_page("pages/3_Vendas.py")
 
 # ---------------------------------------------------
 # RODAPÉ
