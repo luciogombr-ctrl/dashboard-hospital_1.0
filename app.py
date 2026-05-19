@@ -15,15 +15,9 @@ st.set_page_config(
 st.markdown("""
 <style>
 
-/* FUNDO VERDE CLARO + VERDE ESCURO */
+/* FUNDO VERDE SUAVE */
 .stApp {
-    background: linear-gradient(
-        135deg,
-        #dcfce7 5%,
-        #86efac 40%,
-        #16a34a 75%,
-        #14532d 100%
-    );
+    background-color: #dff5e1;
 }
 
 /* ESCONDER MENU */
@@ -39,21 +33,20 @@ header {
     visibility: hidden;
 }
 
-/* TÍTULO */
+/* TÍTULO PRINCIPAL */
 .main-title {
     font-size: 72px;
     font-weight: bold;
     text-align: center;
-    color: white;
+    color: #166534;
     margin-top: 70px;
-    text-shadow: 2px 2px 15px rgba(0,0,0,0.35);
 }
 
 /* SUBTÍTULO */
 .subtitle {
     font-size: 30px;
     text-align: center;
-    color: #f0fdf4;
+    color: #15803d;
     margin-bottom: 50px;
     font-weight: 600;
 }
@@ -61,57 +54,45 @@ header {
 /* CARD CENTRAL */
 .card {
 
-    background: rgba(255,255,255,0.18);
+    background: rgba(255,255,255,0.75);
 
     padding: 55px;
 
     border-radius: 25px;
 
-    backdrop-filter: blur(14px);
-
-    box-shadow: 0px 10px 35px rgba(0,0,0,0.25);
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.10);
 
     text-align: center;
 
     margin-top: 20px;
-
-    border: 1px solid rgba(255,255,255,0.25);
-}
-
-/* TEXTO DO CARD */
-.card-text {
-
-    font-size: 24px;
-
-    color: white;
-
-    line-height: 1.8;
-
-    font-weight: bold;
-
-    text-shadow: 1px 1px 6px rgba(0,0,0,0.35);
 }
 
 /* TÍTULO DO CARD */
 .card-title {
 
-    color: white;
+    color: #166534;
 
     font-size: 42px;
 
     font-weight: bold;
+}
 
-    text-shadow: 1px 1px 10px rgba(0,0,0,0.35);
+/* TEXTO */
+.card-text {
+
+    font-size: 24px;
+
+    color: #14532d;
+
+    line-height: 1.8;
+
+    font-weight: 600;
 }
 
 /* BOTÕES */
 div.stButton > button {
 
-    background: linear-gradient(
-        90deg,
-        #14532d,
-        #16a34a
-    );
+    background-color: #16a34a;
 
     color: white;
 
@@ -128,20 +109,14 @@ div.stButton > button {
     width: 100%;
 
     transition: 0.3s;
-
-    box-shadow: 0px 5px 20px rgba(0,0,0,0.25);
 }
 
 /* HOVER */
 div.stButton > button:hover {
 
-    transform: scale(1.05);
+    background-color: #15803d;
 
-    background: linear-gradient(
-        90deg,
-        #166534,
-        #22c55e
-    );
+    transform: scale(1.03);
 }
 
 /* RODAPÉ */
@@ -149,22 +124,20 @@ div.stButton > button:hover {
 
     text-align: center;
 
-    color: white;
+    color: #166534;
 
     margin-top: 80px;
 
     font-size: 16px;
 
     font-weight: 600;
-
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.25);
 }
 
 </style>
 """, unsafe_allow_html=True)
 
 # ---------------------------------------------------
-# TÍTULO PRINCIPAL
+# TÍTULO
 # ---------------------------------------------------
 st.markdown("""
 <div class="main-title">
