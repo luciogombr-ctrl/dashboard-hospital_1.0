@@ -1,249 +1,88 @@
 import streamlit as st
 
-# ---------------------------------------------------
-# CONFIGURAÇÃO DA PÁGINA
-# ---------------------------------------------------
-st.set_page_config(
-    page_title="Dashboard Hospitalar",
-    page_icon="🏥",
-    layout="wide"
+# ---------------------------------
+# APRESENTAÇÃO
+# ---------------------------------
+st.markdown("<div class='section-title'>Sobre a Plataforma</div>", unsafe_allow_html=True)
+
+st.markdown(
+    """
+<div class='description'>
+Nossa plataforma foi desenvolvida para facilitar a gestão de dados e indicadores.
+A dashboard permite monitorar informações financeiras, hospitalares e comerciais
+em tempo real através de gráficos modernos e relatórios interativos.
+</div>
+""",
+    unsafe_allow_html=True
 )
 
-# ---------------------------------------------------
-# CSS PERSONALIZADO
-# ---------------------------------------------------
-st.markdown("""
-<style>
-
-/* FUNDO VERDE */
-.stApp {
-    background-color: #16a34a;
-}
-
-/* ESCONDER MENU */
-#MainMenu {
-    visibility: hidden;
-}
-
-footer {
-    visibility: hidden;
-}
-
-header {
-    visibility: hidden;
-}
-
-/* TÍTULO PRINCIPAL */
-.main-title {
-    font-size: 72px;
-    font-weight: bold;
-    text-align: center;
-    color: white;
-    margin-top: 70px;
-
-    text-shadow: 1px 1px 10px rgba(0,0,0,0.25);
-}
-
-/* SUBTÍTULO */
-.subtitle {
-    font-size: 30px;
-    text-align: center;
-    color: white;
-    margin-bottom: 50px;
-    font-weight: 600;
-
-    text-shadow: 1px 1px 8px rgba(0,0,0,0.20);
-}
-
-/* CARD CENTRAL */
-.card {
-
-    background: rgba(255,255,255,0.15);
-
-    padding: 55px;
-
-    border-radius: 25px;
-
-    backdrop-filter: blur(8px);
-
-    box-shadow: 0px 8px 25px rgba(0,0,0,0.15);
-
-    text-align: center;
-
-    margin-top: 20px;
-}
-
-/* TÍTULO DO CARD */
-.card-title {
-
-    color: white;
-
-    font-size: 42px;
-
-    font-weight: bold;
-
-    text-shadow: 1px 1px 10px rgba(0,0,0,0.25);
-}
-
-/* TEXTO */
-.card-text {
-
-    font-size: 24px;
-
-    color: white;
-
-    line-height: 1.8;
-
-    font-weight: 600;
-
-    text-shadow: 1px 1px 8px rgba(0,0,0,0.20);
-}
-
-/* BOTÕES */
-div.stButton > button {
-
-    background-color: white;
-
-    color: #15803d;
-
-    font-size: 22px;
-
-    font-weight: bold;
-
-    padding: 16px;
-
-    border-radius: 15px;
-
-    border: none;
-
-    width: 100%;
-
-    transition: 0.3s;
-}
-
-/* HOVER */
-div.stButton > button:hover {
-
-    background-color: #dcfce7;
-
-    transform: scale(1.03);
-}
-
-/* RODAPÉ */
-.footer {
-
-    text-align: center;
-
-    color: white;
-
-    margin-top: 80px;
-
-    font-size: 16px;
-
-    font-weight: 600;
-
-    text-shadow: 1px 1px 6px rgba(0,0,0,0.20);
-}
-
-</style>
-""", unsafe_allow_html=True)
-
-# ---------------------------------------------------
-# TÍTULO
-# ---------------------------------------------------
-st.markdown("""
-<div class="main-title">
-🏥 Dashboard Hospitalar
-</div>
-""", unsafe_allow_html=True)
-
-# ---------------------------------------------------
-# SUBTÍTULO
-# ---------------------------------------------------
-st.markdown("""
-<div class="subtitle">
-Gestão inteligente para hospitais e clínicas
-</div>
-""", unsafe_allow_html=True)
-
-# ---------------------------------------------------
-# CARD CENTRAL
-# ---------------------------------------------------
-st.markdown("""
-<div class="card">
-
-<div class="card-title">
-📊 Plataforma Completa de Gestão
-</div>
-
-<br>
-
-<p class="card-text">
-
-Monitore indicadores em tempo real,
-acompanhe gráficos interativos e tenha
-controle total das áreas estratégicas.
-
-</p>
-
-<br>
-
-<p class="card-text">
-
-📈 Financeiro <br><br>
-
-🏥 Hospitalar <br><br>
-
-🛒 Vendas
-
-</p>
-
-<br>
-
-<p class="card-text">
-
-Tecnologia moderna para decisões rápidas
-e eficientes.
-
-</p>
-
-</div>
-""", unsafe_allow_html=True)
-
-# ---------------------------------------------------
-# ESPAÇAMENTO
-# ---------------------------------------------------
-st.write("")
-st.write("")
-st.write("")
-
-# ---------------------------------------------------
-# BOTÕES
-# ---------------------------------------------------
+# ---------------------------------
+# CARDS
+# ---------------------------------
 col1, col2, col3 = st.columns(3)
 
-# FINANCEIRO
 with col1:
-    if st.button("📈 Financeiro"):
-        st.switch_page("pages/1_Financeiro.py")
+    st.markdown(
+        """
+        <div class='card'>
+            <h2>💰 Financeiro</h2>
+            <p>Controle receitas, despesas, lucro e indicadores financeiros.</p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
-# HOSPITAL
 with col2:
-    if st.button("🏥 Hospital"):
-        st.switch_page("pages/2_Hospital.py")
+    st.markdown(
+        """
+        <div class='card'>
+            <h2>🏥 Hospital</h2>
+            <p>Acompanhe atendimentos, pacientes e desempenho hospitalar.</p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
-# VENDAS
 with col3:
-    if st.button("🛒 Vendas"):
-        st.switch_page("pages/3_Vendas.py")
+    st.markdown(
+        """
+        <div class='card'>
+            <h2>📈 Vendas</h2>
+            <p>Visualize métricas de vendas e performance comercial.</p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
-# ---------------------------------------------------
+st.write("")
+st.write("")
+st.write("")
+
+# ---------------------------------
+# BOTÃO PRINCIPAL
+# ---------------------------------
+st.markdown("<div class='section-title'>Entrar na Dashboard</div>", unsafe_allow_html=True)
+
+col1, col2, col3 = st.columns([1,2,1])
+
+with col2:
+    st.page_link(
+        "pages/1_Financeiro.py",
+        label="🚀 ACESSAR DASHBOARD",
+        icon="📊",
+        use_container_width=True
+    )
+
+st.write("")
+st.write("")
+
+# ---------------------------------
 # RODAPÉ
-# ---------------------------------------------------
-st.markdown("""
-<div class="footer">
-
-Desenvolvido com ❤️ usando Python + Streamlit
-
-</div>
-""", unsafe_allow_html=True)
+# ---------------------------------
+st.markdown(
+    """
+    <div style='text-align:center; color:white; padding:20px;'>
+        Desenvolvido por Lucio Gomes © 2026
+    </div>
+    """,
+    unsafe_allow_html=True
