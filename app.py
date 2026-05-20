@@ -10,7 +10,7 @@ st.set_page_config(
 )
 
 # -----------------------------------
-# ESTILO DA PÁGINA
+# ESTILO
 # -----------------------------------
 st.markdown(
     """
@@ -52,7 +52,7 @@ st.markdown(
         box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
     }
 
-    .stButton>button {
+    .stButton > button {
         width: 100%;
         height: 60px;
         border-radius: 12px;
@@ -61,10 +61,9 @@ st.markdown(
         color: white;
         font-size: 20px;
         font-weight: bold;
-        transition: 0.3s;
     }
 
-    .stButton>button:hover {
+    .stButton > button:hover {
         background-color: #20c997;
         color: black;
     }
@@ -107,14 +106,6 @@ st.image(
 )
 
 # -----------------------------------
-# BOTÃO PRINCIPAL
-# -----------------------------------
-st.markdown("<br>", unsafe_allow_html=True)
-
-if st.button("ENTRAR NA DASHBOARD"):
-    st.switch_page("pages/Financeiro.py")
-
-# -----------------------------------
 # CARDS
 # -----------------------------------
 col1, col2, col3 = st.columns(3)
@@ -123,61 +114,76 @@ col1, col2, col3 = st.columns(3)
 # FINANCEIRO
 # -----------------------------------
 with col1:
+
     st.markdown(
         """
         <div class="caixa">
             <h2>💰 Financeiro</h2>
+
             <p>
-            Controle completo de receitas, despesas,
-            faturamento e relatórios financeiros.
+            Controle completo de receitas,
+            despesas e faturamento.
             </p>
         </div>
         """,
         unsafe_allow_html=True
     )
 
-    if st.button("Acessar Financeiro"):
-        st.switch_page("pages/Financeiro.py")
+    st.page_link(
+        "pages/Financeiro.py",
+        label="Acessar Financeiro",
+        icon="💰"
+    )
 
 # -----------------------------------
 # HOSPITAL
 # -----------------------------------
 with col2:
+
     st.markdown(
         """
         <div class="caixa">
             <h2>🏥 Hospital</h2>
+
             <p>
             Gestão hospitalar com pacientes,
-            consultas, exames e indicadores.
+            exames e indicadores.
             </p>
         </div>
         """,
         unsafe_allow_html=True
     )
 
-    if st.button("Acessar Hospital"):
-        st.switch_page("pages/Hospital.py")
+    st.page_link(
+        "pages/Hospital.py",
+        label="Acessar Hospital",
+        icon="🏥"
+    )
 
 # -----------------------------------
 # VENDAS
 # -----------------------------------
 with col3:
+
     st.markdown(
         """
         <div class="caixa">
             <h2>📈 Vendas</h2>
+
             <p>
             Dashboard de vendas com metas,
-            produtos e desempenho comercial.
+            desempenho e resultados.
             </p>
         </div>
         """,
         unsafe_allow_html=True
     )
 
-    if st.button("Acessar Vendas"):
-        st.switch_page("pages/Vendas.py")
+    st.page_link(
+        "pages/Vendas.py",
+        label="Acessar Vendas",
+        icon="📈"
+    )
 
 # -----------------------------------
 # RODAPÉ
