@@ -1,135 +1,153 @@
+# app.py
+
 import streamlit as st
 
-# CONFIGURAÇÃO DA PÁGINA
 st.set_page_config(
-    page_title="Dashboard Completa",
+    page_title="Dashboard Empresarial",
     page_icon="📊",
     layout="wide"
 )
 
-# ===== ESTILO =====
+# =========================
+# CSS
+# =========================
 st.markdown("""
 <style>
 
-.main {
-    background-color: #0f5132;
+.stApp{
+    background-color:#0f5132;
 }
 
-h1, h2, h3, h4, h5 {
-    color: white;
-    text-align: center;
+.titulo{
+    text-align:center;
+    color:white;
+    font-size:60px;
+    font-weight:bold;
 }
 
-p {
-    color: white;
-    text-align: center;
-    font-size: 18px;
+.subtitulo{
+    text-align:center;
+    color:#d9fff0;
+    font-size:24px;
+    margin-bottom:40px;
 }
 
-.stButton>button {
-    width: 100%;
-    border-radius: 12px;
-    height: 55px;
-    font-size: 18px;
-    font-weight: bold;
-    background-color: #198754;
-    color: white;
-    border: none;
+.card{
+    background:rgba(255,255,255,0.08);
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    color:white;
 }
 
-.stButton>button:hover {
-    background-color: #157347;
-    color: white;
-}
-
-.block-container {
-    padding-top: 2rem;
+.section{
+    color:white;
+    text-align:center;
+    font-size:35px;
+    font-weight:bold;
+    margin-top:40px;
 }
 
 </style>
 """, unsafe_allow_html=True)
 
-# ===== TÍTULO =====
-st.title("📊 Plataforma Completa de Gestão")
+# =========================
+# TÍTULO
+# =========================
+st.markdown(
+    "<div class='titulo'>Dashboard Empresarial</div>",
+    unsafe_allow_html=True
+)
 
-st.write("""
-Bem-vindo ao sistema inteligente de gestão.
+st.markdown(
+    "<div class='subtitulo'>Sistema inteligente de gestão empresarial</div>",
+    unsafe_allow_html=True
+)
 
-Escolha abaixo qual dashboard deseja acessar.
-""")
+# =========================
+# IMAGEM
+# =========================
+st.image(
+    "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1470&auto=format&fit=crop",
+    use_container_width=True
+)
 
-st.divider()
+# =========================
+# SOBRE
+# =========================
+st.markdown(
+    "<div class='section'>Sobre a Plataforma</div>",
+    unsafe_allow_html=True
+)
 
-# ===== COLUNAS =====
-col1, col2, col3 = st.columns(3)
-
-# ===== HOSPITAL =====
-with col1:
-
-    st.markdown("## 🏥 Hospital")
-
-    st.write("""
-    Gestão hospitalar completa com:
-    
-    - Pacientes
-    - Leitos
-    - Médicos
-    - Atendimentos
-    - Indicadores
-    """)
-
-    st.page_link(
-        "pages/1_Hospital.py",
-        label="🏥 Abrir Hospital",
-        icon="🏥"
-    )
-
-# ===== FINANCEIRO =====
-with col2:
-
-    st.markdown("## 💰 Financeiro")
-
-    st.write("""
-    Controle financeiro completo:
-    
-    - Receitas
-    - Despesas
-    - Fluxo de caixa
-    - Indicadores
-    - Relatórios
-    """)
-
-    st.page_link(
-        "pages/2_Financeiro.py",
-        label="💰 Abrir Financeiro",
-        icon="💰"
-    )
-
-# ===== VENDAS =====
-with col3:
-
-    st.markdown("## 📊 Vendas")
-
-    st.write("""
-    Dashboard de vendas completo:
-    
-    - Produtos
-    - Clientes
-    - Metas
-    - Faturamento
-    - Gráficos
-    """)
-
-    st.page_link(
-        "pages/3_Vendas.py",
-        label="📊 Abrir Vendas",
-        icon="📊"
-    )
-
-st.divider()
+st.write("")
 
 st.markdown("""
-<p style='text-align: center; color: white;'>
-© 2026 Plataforma de Gestão Inteligente
-</p>
+<div style='text-align:center;color:white;font-size:20px'>
+Acompanhe indicadores financeiros, hospitalares e comerciais
+em tempo real através de gráficos modernos e dashboards profissionais.
+</div>
+""", unsafe_allow_html=True)
+
+st.write("")
+st.write("")
+
+# =========================
+# CARDS
+# =========================
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.markdown("""
+    <div class='card'>
+        <h2>💰 Financeiro</h2>
+        <p>Controle receitas e despesas.</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+with col2:
+    st.markdown("""
+    <div class='card'>
+        <h2>🏥 Hospital</h2>
+        <p>Gestão hospitalar completa.</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+with col3:
+    st.markdown("""
+    <div class='card'>
+        <h2>📈 Vendas</h2>
+        <p>Monitoramento de vendas.</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+st.write("")
+st.write("")
+st.write("")
+
+# =========================
+# BOTÃO PRINCIPAL
+# =========================
+st.markdown(
+    "<div class='section'>Entrar na Dashboard</div>",
+    unsafe_allow_html=True
+)
+
+col1, col2, col3 = st.columns([1,2,1])
+
+with col2:
+    st.page_link(
+        "pages/1_Financeiro.py",
+        label="🚀 ACESSAR DASHBOARD",
+        icon="📊",
+        use_container_width=True
+    )
+
+st.write("")
+st.write("")
+
+st.markdown("""
+<div style='text-align:center;color:white'>
+Desenvolvido por Lucio Gomes © 2026
+</div>
 """, unsafe_allow_html=True)
