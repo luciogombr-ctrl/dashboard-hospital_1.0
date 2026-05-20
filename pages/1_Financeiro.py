@@ -1,59 +1,43 @@
 import streamlit as st
 import pandas as pd
+import numpy as np
 
-st.set_page_config(
-    page_title="Financeiro",
-    page_icon="💰",
-    layout="wide"
-)
+st.set_page_config(page_title="Financeiro", layout="wide")
 
-# BOTÃO HOME
-st.page_link(
-    "app.py",
-    label="⬅️ Voltar para Home",
-    icon="🏠"
-)
+st.title("💰 Dashboard Financeira")
 
-st.title("💰 Dashboard Financeiro")
-
-st.markdown("---")
-
-# MÉTRICAS
+# MENU
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    st.metric("Receita Mensal", "R$ 150.000", "+12%")
+    st.page_link("app.py", label="🏠 Início", use_container_width=True)
 
 with col2:
-    st.metric("Despesas", "R$ 90.000", "-5%")
+    st.page_link("pages/2_Hospital.py", label="🏥 Hospital", use_container_width=True)
 
 with col3:
-    st.metric("Lucro", "R$ 60.000", "+18%")
+    st.page_link("pages/3_Vendas.py", label="📈 Vendas", use_container_width=True)
 
-st.markdown("---")
+st.divider()
 
-# DADOS
-financeiro = pd.DataFrame({
-    "Mês": ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun"],
-    "Receita": [100, 120, 140, 130, 150, 170],
-    "Despesas": [80, 90, 100, 95, 90, 110]
-})
-
-# GRÁFICOS
-col1, col2 = st.columns(2)
+# KPIS
+col1, col2, col3 = st.columns(3)
 
 with col1:
-    st.subheader("📈 Receita Mensal")
-    st.line_chart(financeiro.set_index("Mês")["Receita"])
+    st.metric("Receita", "R$ 120.000", "+12%")
 
 with col2:
-    st.subheader("📉 Despesas Mensais")
-    st.bar_chart(financeiro.set_index("Mês")["Despesas"])
+    st.metric("Despesas", "R$ 45.000", "-5%")
 
-st.markdown("---")
+with col3:
+    st.metric("Lucro", "R$ 75.000", "+18%")
 
-st.subheader("📋 Resumo Financeiro")
+st.divider()
 
-st.dataframe(financeiro, use_container_width=True)
+# GRÁFICO
+chart_data = pd.DataFrame(
+    np.random.randn(20, 3),
+    columns=['Receitas', 'Despesas', 'Lucro']
+)
 
-st.success("Financeiro atualizado com sucesso.")
+st.line_chart(chart_data)
