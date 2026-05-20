@@ -1,13 +1,17 @@
 import streamlit as st
 
+# -----------------------------------
 # CONFIGURAÇÃO DA PÁGINA
+# -----------------------------------
 st.set_page_config(
     page_title="Dashboard Empresarial",
     page_icon="📊",
     layout="wide"
 )
 
-# CORES E ESTILO
+# -----------------------------------
+# ESTILO PERSONALIZADO
+# -----------------------------------
 st.markdown("""
 <style>
 
@@ -19,7 +23,7 @@ h1, h2, h3, h4, h5, h6 {
     color: white;
 }
 
-p {
+p, div {
     color: white;
 }
 
@@ -27,37 +31,51 @@ p {
     background-color: #198754;
 }
 
-.botao {
+.stButton>button {
     background-color: white;
     color: #198754;
-    padding: 15px;
     border-radius: 10px;
-    text-align: center;
-    font-size: 18px;
+    padding: 10px 20px;
     font-weight: bold;
+    border: none;
+}
+
+.stButton>button:hover {
+    background-color: #d1e7dd;
+    color: #0f5132;
 }
 
 </style>
 """, unsafe_allow_html=True)
 
+# -----------------------------------
 # TÍTULO
+# -----------------------------------
 st.title("📊 Plataforma Completa de Gestão")
 
 st.write("""
 Bem-vindo à plataforma empresarial.
 
 Acesse abaixo os módulos disponíveis:
-- Hospital
-- Financeiro
-- Vendas
+
+- 🏥 Hospital
+- 💰 Financeiro
+- 📈 Vendas
 """)
 
-# BANNER
-st.image("assets/banner.jpg", use_container_width=True)
+# -----------------------------------
+# BANNER ONLINE
+# -----------------------------------
+st.image(
+    "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d",
+    use_container_width=True
+)
 
 st.divider()
 
-# BOTÕES DE ACESSO
+# -----------------------------------
+# BOTÕES DE NAVEGAÇÃO
+# -----------------------------------
 col1, col2, col3 = st.columns(3)
 
 with col1:
@@ -80,3 +98,14 @@ with col3:
         label="📈 Abrir Vendas",
         icon="📈"
     )
+
+# -----------------------------------
+# RODAPÉ
+# -----------------------------------
+st.divider()
+
+st.markdown("""
+<div style='text-align: center; color: white;'>
+    © 2026 Plataforma de Gestão Empresarial
+</div>
+""", unsafe_allow_html=True)
