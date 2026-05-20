@@ -112,13 +112,16 @@ st.image(
 st.markdown("<br>", unsafe_allow_html=True)
 
 if st.button("ENTRAR NA DASHBOARD"):
-    st.success("Dashboard carregada com sucesso!")
+    st.switch_page("pages/Financeiro.py")
 
 # -----------------------------------
 # CARDS
 # -----------------------------------
 col1, col2, col3 = st.columns(3)
 
+# -----------------------------------
+# FINANCEIRO
+# -----------------------------------
 with col1:
     st.markdown(
         """
@@ -133,8 +136,12 @@ with col1:
         unsafe_allow_html=True
     )
 
-    st.button("Acessar Financeiro")
+    if st.button("Acessar Financeiro"):
+        st.switch_page("pages/Financeiro.py")
 
+# -----------------------------------
+# HOSPITAL
+# -----------------------------------
 with col2:
     st.markdown(
         """
@@ -149,8 +156,12 @@ with col2:
         unsafe_allow_html=True
     )
 
-    st.button("Acessar Hospital")
+    if st.button("Acessar Hospital"):
+        st.switch_page("pages/Hospital.py")
 
+# -----------------------------------
+# VENDAS
+# -----------------------------------
 with col3:
     st.markdown(
         """
@@ -165,7 +176,8 @@ with col3:
         unsafe_allow_html=True
     )
 
-    st.button("Acessar Vendas")
+    if st.button("Acessar Vendas"):
+        st.switch_page("pages/Vendas.py")
 
 # -----------------------------------
 # RODAPÉ
@@ -176,7 +188,7 @@ st.markdown(
     """
     <center>
         <p style='color:white;'>
-            Desenvolvido por Lucio gomes de Oliveira
+            Desenvolvido por Lucio Gomes de Oliveira
         </p>
     </center>
     """,
