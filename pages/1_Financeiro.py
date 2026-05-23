@@ -41,13 +41,13 @@ st.divider()
 c1, c2, c3 = st.columns(3)
 
 with c1:
-    st.metric("Receita", "R$ 1.576.000", "+50%")
+    st.metric("Receita", "R$ 1.576.000", "+18%")
 
 with c2:
-    st.metric("Despesas", "R$ 854.000", "-40%")
+    st.metric("Despesas", "R$ 854.000", "-9%")
 
 with c3:
-    st.metric("Lucro", "R$ 722.000", "+25%")
+    st.metric("Lucro", "R$ 722.000", "+26%")
 
 st.divider()
 
