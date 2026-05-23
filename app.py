@@ -68,7 +68,7 @@ st.markdown(
 # IMAGEM
 # =========================
 st.image(
-    "https://gemini.google.com/app/30c954989d918566?hl=pt-br",
+    "https://github.com/luciogombr-ctrl/dashboard-hospital_1.0/blob/main/Gemini_Generated_Image_5r18v25r18v25r18%20(1).pngr",
     use_container_width=True
 )
 
