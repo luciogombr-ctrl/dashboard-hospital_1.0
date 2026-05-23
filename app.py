@@ -48,6 +48,11 @@ st.markdown("""
     margin-top:40px;
 }
 
+/* SOMENTE A COR DO "ACESSAR DASHBOARD" */
+[data-testid="stPageLink-NavLink"] p{
+    color:white !important;
+}
+
 </style>
 """, unsafe_allow_html=True)
 
