@@ -41,13 +41,13 @@ st.divider()
 c1, c2, c3 = st.columns(3)
 
 with c1:
-    st.metric("Pacientes", "320", "+20")
+    st.metric("Pacientes", "320", "+12%")
 
 with c2:
     st.metric("Atendimentos", "1.250", "+15%")
 
 with c3:
-    st.metric("Leitos", "87%", "+4%")
+    st.metric("Leitos Ocupados", "87%", "+4%")
 
 st.divider()
 
