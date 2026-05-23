@@ -68,7 +68,7 @@ st.markdown(
 # IMAGEM
 # =========================
 st.image(
-    "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1470&auto=format&fit=crop",
+    "https://gemini.google.com/app/30c954989d918566?hl=pt-br",
     use_container_width=True
 )
 
