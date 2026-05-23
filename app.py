@@ -148,6 +148,6 @@ st.write("")
 
 st.markdown("""
 <div style='text-align:center;color:white'>
-Desenvolvido por Lucio Gomes © 2026
+Desenvolvido por Lucio Gomes de Oliveira © 2026
 </div>
 """, unsafe_allow_html=True)
