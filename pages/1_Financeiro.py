@@ -44,7 +44,7 @@ with c1:
     st.metric("Receita", "R$ 1.576.000", "+50%")
 
 with c2:
-    st.metric("Despesas", "R$ 854.000", "-10%")
+    st.metric("Despesas", "R$ 854.000", "-40%")
 
 with c3:
     st.metric("Lucro", "R$ 722.000", "+25%")
